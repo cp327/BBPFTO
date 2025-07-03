@@ -5,47 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>B&B Profesional - Financial Tourism and Operations</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <script defer>
-        // Menú Hamburguesa
-        document.addEventListener("DOMContentLoaded", function () {
-        const menuBtn = document.getElementById("menuBtn");
-        const mobileMenu = document.getElementById("mobileMenu");
-        let isOpen = false;
-
-        menuBtn.addEventListener("click", () => {
-            isOpen = !isOpen;
-            mobileMenu.style.maxHeight = isOpen ? mobileMenu.scrollHeight + "px" : "0";
-        });
-
-        const menuLinks = mobileMenu.querySelectorAll("a");
-        menuLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-            isOpen = false;
-            mobileMenu.style.maxHeight = "0";
-            });
-        });
-
-        // Back to Top
-        const backToTop = document.getElementById("backToTop");
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 300) {
-            backToTop.classList.remove("opacity-0", "pointer-events-none");
-            } else {
-            backToTop.classList.add("opacity-0", "pointer-events-none");
-            }
-        });
-
-        backToTop.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        });
-    </script>
-    <style>
-        html {
-        scroll-behavior: smooth;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/public/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     </head>
     <body class="bg-white text-gray-800">
 
@@ -73,262 +35,329 @@
         <a href="#servicios" class="block py-2 border-b border-blue-600 hover:underline text-white">Servicios</a>
         <a href="#socios" class="block py-2 border-b border-blue-600 hover:underline text-white">Socios</a>
         <a href="#blog" class="block py-2 border-b border-blue-600 hover:underline text-white">Blog</a>
-        <a href="#contacto" class="block py-2 mt-2 border-t border-blue-600 text-blue-100 font-semibold sm:hidden">Contacto</a>
         </div>
     </header>
 
     <!-- Hero con Parallax -->
-    <section class="h-[70vh] bg-fixed bg-center bg-cover flex items-center justify-center text-white text-center"
-        style="background-image: url('cartagena.webp');">
-        <div class="bg-blue-900/80 p-10 rounded-xl">
-            <h2 class="text-4xl font-bold">Expertos en Finanzas y Turismo</h2>
-            <p class="mt-4 text-lg">Consultoría, auditoría y operaciones para el sector hotelero y turístico.</p>
+    <section class="h-[50vh] sm:h-[70vh] bg-fixed bg-center bg-cover flex items-center justify-center text-white text-center px-4"
+        style="background-image: url('assets/public/img/cartagena.webp');">
+        <div class="bg-blue-900/80 p-4 sm:p-10 rounded-xl w-full max-w-[90%] sm:max-w-3xl">
+            <h2 class="text-2xl sm:text-4xl font-bold">Expertos en Finanzas y Turismo</h2>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-lg">Consultoría, auditoría y operaciones para el sector hotelero y turístico.</p>
         </div>
     </section>
 
     <!-- ¿Quiénes somos? -->
-    <section id="quienes-somos" class="py-12 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold text-blue-800 mb-6 text-center">¿Quiénes somos?</h2>
-        <p class="text-lg text-gray-700 leading-relaxed text-justify">
-        Somos un grupo interdisciplinario de profesionales hoteleros con más de 30 años de experiencia en el sector turístico nacional e internacional. Nuestra trayectoria en cadenas como <strong>Accor, Intercontinental, Hilton y Decameron</strong> respalda nuestro conocimiento en altos estándares operativos y de servicio.
-        <br><br>
-        Actualmente operamos hoteles en <strong>Montería</strong> y <strong>Cartagena</strong>, lo que nos permite mantenernos conectados con las tendencias actuales del mercado. Además, somos propietarios de la agencia <strong>Kazabe Luxury Travel</strong>, lo que fortalece nuestra capacidad comercial y amplía nuestros canales de distribución.
-        <br><br>
-        Nuestro compromiso es aportar valor real a su negocio, generando alianzas estratégicas bajo un enfoque de beneficio mutuo.
-        <br><br>
+    <section id="quienes-somos" class="py-12 px-4 sm:px-6 max-w-7xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold text-blue-800 mb-6 text-center">¿Quiénes somos?</h2>
+        <p class="text-base sm:text-lg text-gray-700 leading-relaxed text-justify">
+            Somos un grupo interdisciplinario de profesionales hoteleros con más de 30 años de experiencia en el sector turístico nacional e internacional. Nuestra trayectoria en cadenas como <strong>Accor, Intercontinental, Hilton y Decameron</strong> respalda nuestro conocimiento en altos estándares operativos y de servicio.
+            <br><br>
+            Actualmente operamos hoteles en <strong>Montería</strong> y <strong>Cartagena</strong>, lo que nos permite mantenernos conectados con las tendencias actuales del mercado. Además, somos propietarios de la agencia <strong>Kazabe Luxury Travel</strong>, lo que fortalece nuestra capacidad comercial y amplía nuestros canales de distribución.
+            <br><br>
+            Nuestro compromiso es aportar valor real a su negocio, generando alianzas estratégicas bajo un enfoque de beneficio mutuo.
+            <br><br>
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <div>
-                <h3 class="text-xl font-semibold text-blue-700">Misión</h3>
-                <p>Brindar soluciones integrales que impulsen la rentabilidad y eficiencia operativa en empresas turísticas y hoteleras.</p>
+                <h3 class="text-lg sm:text-xl font-semibold text-blue-700">Misión</h3>
+                <p class="text-sm sm:text-base">Brindar soluciones integrales que impulsen la rentabilidad y eficiencia operativa en empresas turísticas y hoteleras.</p>
             </div>
             <div>
-                <h3 class="text-xl font-semibold text-blue-700">Visión</h3>
-                <p>Ser reconocidos como referentes en servicios financieros y operacionales en el sector turístico de Latinoamérica.</p>
+                <h3 class="text-lg sm:text-xl font-semibold text-blue-700">Visión</h3>
+                <p class="text-sm sm:text-base">Ser reconocidos como referentes en servicios financieros y operacionales en el sector turístico de Latinoamérica.</p>
             </div>
         </div>
     </section>
 
     <!-- Sección Servicios -->
-    <section id="servicios" class="bg-fixed py-16 bg-center bg-cover text-white" style="background-image: url('cartagena.webp');">
-        <div class="max-w-7xl mx-auto px-6">
-        <div class="flex justify-center mb-12">
+    <section id="servicios" class="bg-fixed py-12 sm:py-16 bg-center bg-cover text-white" style="background-image: url('assets/public/img/cartagena.webp');">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex justify-center mb-10 sm:mb-12">
             <div class="bg-blue-900/80 rounded-xl p-5 inline-block text-center">
-            <h2 class="text-3xl font-bold text-white">Nuestros Servicios</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold  text-white">Nuestros Servicios</h2>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8   max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-6">
             
-            <!-- Servicio 1 -->
-            <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-            <div class="text-blue-700 text-4xl mb-4">
+            <!-- Servicio 1 data-aos="fade-up" -->
+            <div class="bg-blue-50 p-4 rounded-xl shadow hover:shadow-lg transition">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="text-blue-700 text-3xl">
                 📊
+                </div>
+                <h3 class="text-lg font-semibold text-blue-800 sm:text-xl">
+                Área gerencial, financiera y contable
+                </h3>
             </div>
-            <h3 class="text-xl font-semibold text-blue-800 mb-2">Área gerencial, financiera y contable</h3>
-            <p class="text-gray-700">Definimos estrategias y presupuestos realistas pero ambiciosos para asegurar la rentabilidad y sostenibilidad del negocio.</p>
+            <p class="text-gray-700 text-sm sm:text-base">
+                Definimos estrategias y presupuestos realistas pero ambiciosos para asegurar la rentabilidad y sostenibilidad del negocio.
+            </p>
             </div>
 
             <!-- Servicio 2 -->
             <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-            <div class="text-blue-700 text-4xl mb-4">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="text-blue-700 text-3xl">
                 🏨
+                </div>
+                <h3 class="text-lg font-semibold text-blue-800 sm:text-xl">
+                Procesos operacionales
+                </h3>
             </div>
-            <h3 class="text-xl font-semibold text-blue-800 mb-2">Área de procesos operacionales</h3>
-            <p class="text-gray-700">Optimizamos procesos en alojamiento, alimentos y bebidas, eventos y otros departamentos para garantizar eficiencia operativa.</p>
+            <p class="text-gray-700 text-sm sm:text-base">
+                Optimizamos procesos en alojamiento, alimentos y bebidas, eventos y otros departamentos para garantizar eficiencia operativa.
+            </p>
             </div>
 
             <!-- Servicio 3 -->
             <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-            <div class="text-blue-700 text-4xl mb-4">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="text-blue-700 text-3xl">
                 🧾
+                </div>
+                <h3 class="text-lg font-semibold text-blue-800 sm:text-xl">
+                Recursos humanos
+                </h3>
             </div>
-            <h3 class="text-xl font-semibold text-blue-800 mb-2">Área de recursos humanos</h3>
-            <p class="text-gray-700">Estandarizamos procesos administrativos para fortalecer la gestión del talento humano y el cumplimiento normativo.</p>
+            <p class="text-gray-700 text-sm sm:text-base">
+                Estandarizamos procesos administrativos para fortalecer la gestión del talento humano y el cumplimiento normativo.
+            </p>
             </div>
 
             <!-- Servicio 4 -->
             <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-            <div class="text-blue-700 text-4xl mb-4">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="text-blue-700 text-3xl">
                 🌍
+                </div>
+                <h3 class="text-lg font-semibold text-blue-800 sm:text-xl">
+                Mercadeo y ventas
+                </h3>
             </div>
-            <h3 class="text-xl font-semibold text-blue-800 mb-2"> Área de mercadeo y ventas</h3>
-            <p class="text-gray-700">Diseñamos y ejecutamos presupuestos comerciales, con seguimiento a campañas de ventas, promoción y marketing.</p>
+            <p class="text-gray-700 text-sm sm:text-base">
+                Diseñamos y ejecutamos presupuestos comerciales, con seguimiento a campañas de ventas, promoción y marketing.
+            </p>
             </div>
 
             <!-- Servicio 5 -->
             <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-            <div class="text-blue-700 text-4xl mb-4">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="text-blue-700 text-3xl">
                 💼
+                </div>
+                <h3 class="text-lg font-semibold text-blue-800 sm:text-xl">
+                Mantenimiento
+                </h3>
             </div>
-            <h3 class="text-xl font-semibold text-blue-800 mb-2"> Área de mantenimiento</h3>
-            <p class="text-gray-700">Supervisamos el estado físico del activo, gestionando su conservación y proponiendo reposición según el flujo de caja.</p>
+            <p class="text-gray-700 text-sm sm:text-base">
+                Supervisamos el estado físico del activo, gestionando su conservación y proponiendo reposición según el flujo de caja.
+            </p>
             </div>
 
             <!-- Servicio 6 -->
             <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-lg transition">
-            <div class="text-blue-700 text-4xl mb-4">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="text-blue-700 text-3xl">
                 📈
+                </div>
+                <h3 class="text-lg font-semibold text-blue-800 sm:text-xl">
+                Imagen corporativa del activo
+                </h3>
             </div>
-            <h3 class="text-xl font-semibold text-blue-800 mb-2">Imagen corporativa del activo</h3>
-            <p class="text-gray-700">Preservamos el valor y la reputación del establecimiento con prácticas de operación, servicio y comercialización de alto estándar.</p>
+            <p class="text-gray-700 text-sm sm:text-base">
+                Preservamos el valor y la reputación del establecimiento con prácticas de operación, servicio y comercialización de alto estándar.
+            </p>
             </div>
-        </div>
-        </div>
     </section>
 
     <!-- Sección de socios -->
-    <section id="socios" class="py-16 bg-white max-w-7xl mx-auto">
-        <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-blue-800 text-center mb-12">Socios</h2>
+    <section id="socios" class="py-12 sm:py-16 bg-white max-w-7xl mx-auto px-4 sm:px-6">
+    <h2 class="text-2xl sm:text-3xl font-bold text-blue-800 text-center mb-10 sm:mb-12">Socios</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-            <!-- Socio 1 -->
-            <div class="bg-blue-50 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
-            <img src="pfp1.jpg" alt="Socio 1" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-300 shadow-md" />
-            <h3 class="text-xl font-semibold text-blue-800">Hisnardo Buelvas</h3>
-            <p class="text-blue-700 text-sm mb-3">Director administrativo y financiero especializado en turismo</p>
-            <p class="text-gray-700 mb-4">Con más de 30 años de experiencia en el sector turístico. He sido gerente, asesor y directivo en hoteles de Cartagena y Santa Marta. </p>
-            <a href="cv-juan-perez.pdf" download
-                class="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-900 transition">
-                Descargar CV
-            </a>
-            </div>
-
-            <!-- Socio 2 -->
-            <div class="bg-blue-50 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
-            <img src="pfp2.jpg" alt="Socio 2" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-300 shadow-md" />
-            <h3 class="text-xl font-semibold text-blue-800">Carlos Bobadilla Deulufeut</h3>
-            <p class="text-blue-700 text-sm mb-3">Asesor financiero especializado en el sector hotelero</p>
-            <p class="text-gray-700 mb-4">Con más de 20 años de experiencia en auditoría, gestión financiera y estrategia en el sector hotelero.</p>
-            <a href="cv-maria-gomez.pdf" download
-                class="bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-900 transition">
-                Descargar CV
-            </a>
-            </div>
-
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
+        <!-- Socio 1 -->
+        <div class="bg-blue-50 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center text-center">
+        <img src="assets/public/img/pfp1.jpg" alt="Socio 1"
+            class="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover mb-4 border-4 border-blue-300 shadow-md" />
+        <h3 class="text-lg sm:text-xl font-semibold text-blue-800">Hisnardo Buelvas</h3>
+        <p class="text-blue-700 text-xs sm:text-sm mb-2 sm:mb-3">Director administrativo y financiero especializado en turismo</p>
+        <p class="text-gray-700 text-sm sm:text-base mb-3 sm:mb-4">
+            Con más de 30 años de experiencia en el sector turístico. He sido gerente, asesor y directivo en hoteles de Cartagena y Santa Marta.
+        </p>
+        <a href="cv-juan-perez.pdf" download
+            class="bg-blue-800 text-white text-sm sm:text-base px-4 py-2 rounded hover:bg-blue-900 transition">
+            Descargar CV
+        </a>
         </div>
+
+        <!-- Socio 2 -->
+        <div class="bg-blue-50 rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center text-center">
+        <img src="assets/public/img/pfp2.jpg" alt="Socio 2"
+            class="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover mb-4 border-4 border-blue-300 shadow-md" />
+        <h3 class="text-lg sm:text-xl font-semibold text-blue-800">Carlos Bobadilla Deulufeut</h3>
+        <p class="text-blue-700 text-xs sm:text-sm mb-2 sm:mb-3">Asesor financiero especializado en el sector hotelero</p>
+        <p class="text-gray-700 text-sm sm:text-base mb-3 sm:mb-4">
+            Con más de 20 años de experiencia en auditoría, gestión financiera y estrategia en el sector hotelero.
+        </p>
+        <a href="cv-maria-gomez.pdf" download
+            class="bg-blue-800 text-white text-sm sm:text-base px-4 py-2 rounded hover:bg-blue-900 transition">
+            Descargar CV
+        </a>
         </div>
+    </div>
     </section>
 
     <!-- Sección Blog / Reseñas -->
-    <section id="blog" class="bg-blue-50 py-16 mx-auto">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-blue-800 text-center mb-4">Testimonios de Clientes</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Clientes satisfechos comparten su experiencia con B&B Profesional Financial Tourism and Operations.</p>
+    <section id="blog" class="bg-blue-50 py-12 sm:py-16 mx-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl font-bold text-blue-800 text-center mb-4">Testimonios de Clientes</h2>
+        <p class="text-center text-gray-600 text-sm sm:text-base mb-10 sm:mb-12 max-w-2xl mx-auto">
+        Clientes satisfechos comparten su experiencia con B&B Profesional Financial Tourism and Operations.
+        </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+        <!-- Slider móvil -->
+        <div class="block md:hidden overflow-x-auto">
+            <div class="flex space-x-4 pb-4">
                 <!-- Reseña 1 -->
-                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-                    <div class="flex items-center space-x-4 mb-4">
-                    <img src="https://i.pravatar.cc/80?img=5" alt="Cliente" class="w-12 h-12 rounded-full object-cover" />
+                <div class="min-w-[280px] max-w-[300px] w-[300px] bg-white p-4 rounded-xl shadow flex-shrink-0">
+                <div class="flex items-center space-x-3 mb-3">
+                    <img src="https://i.pravatar.cc/80?img=5" alt="Cliente" class="w-10 h-10 rounded-full object-cover" />
                     <div>
-                        <h4 class="text-blue-800 font-semibold">Laura Herrera</h4>
-                        <span class="text-sm text-gray-500">Gerente, Hotel Bahía</span>
+                    <h4 class="text-blue-800 text-sm font-semibold">Laura Herrera</h4>
+                    <span class="text-xs text-gray-500">Gerente, Hotel Bahía</span>
                     </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 italic">"La consultoría financiera que recibimos optimizó nuestros ingresos. ¡Un equipo confiable y profesional!"</p>
-                    <div class="text-yellow-400 text-sm">
-                    ⭐⭐⭐⭐⭐
-                    </div>
+                </div>
+                <p class="text-gray-700 text-sm mb-2 italic">
+                    "La consultoría financiera que recibimos optimizó nuestros ingresos. ¡Un equipo confiable y profesional!"
+                </p>
+                <div class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
                 </div>
 
                 <!-- Reseña 2 -->
-                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-                    <div class="flex items-center space-x-4 mb-4">
-                    <img src="https://i.pravatar.cc/80?img=11" alt="Cliente" class="w-12 h-12 rounded-full object-cover" />
+                <div class="min-w-[280px] max-w-[300px] w-[300px] bg-white p-4 rounded-xl shadow flex-shrink-0">
+                <div class="flex items-center space-x-3 mb-3">
+                    <img src="https://i.pravatar.cc/80?img=11" alt="Cliente" class="w-10 h-10 rounded-full object-cover" />
                     <div>
-                        <h4 class="text-blue-800 font-semibold">Carlos Méndez</h4>
-                        <span class="text-sm text-gray-500">Director, Agencia Turística Oasis</span>
+                    <h4 class="text-blue-800 text-sm font-semibold">Carlos Méndez</h4>
+                    <span class="text-xs text-gray-500">Director, Agencia Turística Oasis</span>
                     </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 italic">"Gracias a las auditorías de B&B detectamos áreas críticas que pudimos corregir a tiempo. 100% recomendados."</p>
-                    <div class="text-yellow-400 text-sm">
-                    ⭐⭐⭐⭐☆
-                    </div>
+                </div>
+                <p class="text-gray-700 text-sm mb-2 italic">
+                    "Gracias a las auditorías de B&B detectamos áreas críticas que pudimos corregir a tiempo. 100% recomendados."
+                </p>
+                <div class="text-yellow-400 text-sm">⭐⭐⭐⭐☆</div>
                 </div>
 
                 <!-- Reseña 3 -->
-                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-                    <div class="flex items-center space-x-4 mb-4">
-                    <img src="https://i.pravatar.cc/80?img=7" alt="Cliente" class="w-12 h-12 rounded-full object-cover" />
+                <div class="min-w-[280px] max-w-[300px] w-[300px] bg-white p-4 rounded-xl shadow flex-shrink-0">
+                <div class="flex items-center space-x-3 mb-3">
+                    <img src="https://i.pravatar.cc/80?img=7" alt="Cliente" class="w-10 h-10 rounded-full object-cover" />
                     <div>
-                        <h4 class="text-blue-800 font-semibold">Ana Rojas</h4>
-                        <span class="text-sm text-gray-500">CEO, Rojas Resorts</span>
-                    </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 italic">"El acompañamiento en operaciones hoteleras nos ayudó a mejorar procesos y reducir pérdidas operativas."</p>
-                    <div class="text-yellow-400 text-sm">
-                    ⭐⭐⭐⭐⭐
+                    <h4 class="text-blue-800 text-sm font-semibold">Ana Rojas</h4>
+                    <span class="text-xs text-gray-500">CEO, Rojas Resorts</span>
                     </div>
                 </div>
-
+                <p class="text-gray-700 text-sm mb-2 italic">
+                    "El acompañamiento en operaciones hoteleras nos ayudó a mejorar procesos y reducir pérdidas operativas."
+                </p>
+                <div class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+                </div>
             </div>
+        </div>  
+
+        <!-- Grid escritorio -->
+        <div class="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+           
+            <!-- Reseña 1 -->
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                <div class="flex items-center space-x-4 mb-4">
+                <img src="https://i.pravatar.cc/80?img=5" alt="Cliente" class="w-12 h-12 rounded-full object-cover" />
+                <div>
+                    <h4 class="text-blue-800 font-semibold">Laura Herrera</h4>
+                    <span class="text-sm text-gray-500">Gerente, Hotel Bahía</span>
+                </div>
+                </div>
+                <p class="text-gray-700 mb-3 italic">"La consultoría financiera que recibimos optimizó nuestros ingresos. ¡Un equipo confiable y profesional!"</p>
+                <div class="text-yellow-400 text-sm">
+                ⭐⭐⭐⭐⭐
+                </div>
+            </div>
+
+            <!-- Reseña 2 -->
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                <div class="flex items-center space-x-4 mb-4">
+                <img src="https://i.pravatar.cc/80?img=11" alt="Cliente" class="w-12 h-12 rounded-full object-cover" />
+                <div>
+                    <h4 class="text-blue-800 font-semibold">Carlos Méndez</h4>
+                    <span class="text-sm text-gray-500">Director, Agencia Turística Oasis</span>
+                </div>
+                </div>
+                <p class="text-gray-700 mb-3 italic">"Gracias a las auditorías de B&B detectamos áreas críticas que pudimos corregir a tiempo. 100% recomendados."</p>
+                <div class="text-yellow-400 text-sm">
+                ⭐⭐⭐⭐☆
+                </div>
+            </div>
+
+            <!-- Reseña 3 -->
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                <div class="flex items-center space-x-4 mb-4">
+                <img src="https://i.pravatar.cc/80?img=7" alt="Cliente" class="w-12 h-12 rounded-full object-cover" />
+                <div>
+                    <h4 class="text-blue-800 font-semibold">Ana Rojas</h4>
+                    <span class="text-sm text-gray-500">CEO, Rojas Resorts</span>
+                </div>
+                </div>
+                <p class="text-gray-700 mb-3 italic">"El acompañamiento en operaciones hoteleras nos ayudó a mejorar procesos y reducir pérdidas operativas."</p>
+                <div class="text-yellow-400 text-sm">
+                ⭐⭐⭐⭐⭐
+                </div>
+            </div>
+
         </div>
+    </div>
     </section>
+
 
     <!-- Sección de contacto -->
     <section id="contacto" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-blue-800 text-center mb-8">Contáctanos</h2>
+    <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-blue-800 text-center mb-8">Contáctanos</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="flex flex-col items-center">
+        <!-- Formulario -->
+        <form class="bg-blue-50 p-6 w-full rounded-xl shadow-md space-y-4">
+            <div>
+            <label class="block text-blue-800 font-semibold mb-1" for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required
+                class="w-full px-4 py-2 border border-blue-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div>
+            <label class="block text-blue-800 font-semibold mb-1" for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required
+                class="w-full px-4 py-2 border border-blue-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+            <div>
+            <label class="block text-blue-800 font-semibold mb-1" for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required
+                class="w-full px-4 py-2 border border-blue-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+            </div>
+            <button type="submit"
+            class="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-900 transition">Enviar</button>
+        </form>
 
-                <!-- Formulario -->
-                <form class="bg-blue-50 p-6 rounded-xl shadow-md space-y-4">
-                    <div>
-                    <label class="block text-blue-800 font-semibold mb-1" for="nombre">Nombre</label>
-                    <input id="nombre" name="nombre" type="text" required
-                        class="w-full px-4 py-2 border border-blue-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
-                    </div>
-                    <div>
-                    <label class="block text-blue-800 font-semibold mb-1" for="email">Correo electrónico</label>
-                    <input id="email" name="email" type="email" required
-                        class="w-full px-4 py-2 border border-blue-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
-                    </div>
-                    <div>
-                    <label class="block text-blue-800 font-semibold mb-1" for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required
-                        class="w-full px-4 py-2 border border-blue-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
-                    </div>
-                    <button type="submit"
-                    class="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-900 transition">Enviar</button>
-                </form>
-
-                <!-- Contactos rápidos -->
-                <div class="flex flex-col justify-center space-y-6 text-blue-800 text-lg">
-                    <div class="flex items-center space-x-3">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                        d="M16.5,3A5.5,5.5,0,1,1,11,8.5,5.5,5.5,0,0,1,16.5,3Zm0,9A3.5,3.5,0,1,0,13,8.5,3.5,3.5,0,0,0,16.5,12Z" />
-                        <path
-                        d="M4,21a1,1,0,0,1-1-1V19c0-3.3,2.7-6,6-6h6c3.3,0,6,2.7,6,6v1a1,1,0,0,1-1,1Z" />
-                    </svg>
-                    <a href="mailto:contacto@bybpro.com" class="hover:underline">contacto@bybpro.com</a>
-                    </div>
-
-                    <div class="flex items-center space-x-3">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                        d="M16.75 2h-9.5A5.25 5.25 0 0 0 2 7.25v9.5A5.25 5.25 0 0 0 7.25 22h9.5A5.25 5.25 0 0 0 22 16.75v-9.5A5.25 5.25 0 0 0 16.75 2ZM20.5 16.75a3.75 3.75 0 0 1-3.75 3.75h-9.5A3.75 3.75 0 0 1 3.5 16.75v-9.5A3.75 3.75 0 0 1 7.25 3.5h9.5A3.75 3.75 0 0 1 20.5 7.25Z" />
-                        <circle cx="12" cy="12" r="3.5" />
-                        <circle cx="17.5" cy="6.5" r="1.5" />
-                    </svg>
-                    <a href="https://www.instagram.com/hbconsultor?igsh=YWVwazlrZHVxNXhn" target="_blank" class="hover:underline">@hbconsultor</a>
-                    </div>
-
-                    <div class="flex items-center space-x-3">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                        d="M21.05 16.56c-.8-.4-2.44-1.22-2.82-1.35-.38-.14-.66-.2-.93.2s-1.07 1.35-1.3 1.62c-.24.26-.48.3-.88.1s-1.7-.63-3.24-2.02c-1.2-1.06-2-2.36-2.23-2.76-.23-.4-.02-.61.18-.8.18-.18.4-.47.6-.7.2-.24.26-.4.4-.67.13-.26.07-.5 0-.7s-.93-2.25-1.27-3.1c-.33-.88-.67-.75-.93-.75s-.5-.02-.76-.02a1.48 1.48 0 0 0-1.08.5 4.39 4.39 0 0 0-1.37 3.26c0 1.92.93 3.75 2.13 5.17 2.56 3.1 5.78 4.34 7.56 4.83.8.22 1.53.18 2.1.1.64-.1 1.95-.8 2.23-1.57.28-.8.28-1.48.2-1.62-.08-.12-.3-.2-.6-.34Z" />
-                    </svg>
-                    <a href="https://wa.me/573001112233" target="_blank" class="hover:underline">+57 300 111 2233</a>
-                    </div>
-                </div>
-            </div>     
+        <!-- Iconos sociales -->
+        <div class="flex justify-center space-x-6 mt-6 text-blue-800 text-2xl">
+            <a href="mailto:contacto@bybpro.com" target="_blank" title="Correo"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/573001112233" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/hbconsultor?igsh=YWVwazlrZHVxNXhn" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
+        </div>
+    </div>
     </section>
+
+
 
     <!-- Botón Volver Arriba -->
     <button id="backToTop"
@@ -337,34 +366,48 @@
         ↑
     </button>
 
-    <!-- Footer -->
     <footer class="bg-blue-900 text-white py-8 mt-20">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-        <div class="text-center md:text-left">
-            <h3 class="text-xl font-bold">B&B Profesional</h3>
-            <p class="text-sm text-blue-200">Financial Tourism and Operations</p>
-            <p class="text-xs text-blue-300 mt-1">📍 Cartagena de Indias, Colombia</p>
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+            <!-- Info -->
+            <div class="text-center md:text-left">
+                <h3 class="text-xl font-bold">B&B Profesional</h3>
+                <p class="text-sm text-blue-200">Financial Tourism and Operations</p>
+                <p class="text-xs text-blue-300 mt-1">📍 Cartagena de Indias, Colombia</p>
+            </div>
+
+            <!-- Navegación -->
+            <nav class="flex flex-col sm:flex-row items-center sm:space-x-6 space-y-2 sm:space-y-0 text-sm text-center">
+                <a href="#quienes-somos" class="hover:underline">¿Quiénes somos?</a>
+                <a href="#servicios" class="hover:underline">Servicios</a>
+                <a href="#socios" class="hover:underline">Socios</a>
+                <a href="#blog" class="hover:underline">Blog</a>
+                <a href="#contacto" class="hover:underline">Contacto</a>
+            </nav>
+
+            <!-- Redes -->
+            <div class="flex justify-center space-x-4 text-blue-200 text-xl">
+                <a href="mailto:contacto@bybpro.com" target="_blank" title="Correo"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/573001112233" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/hbconsultor?igsh=YWVwazlrZHVxNXhn" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
 
-        <nav class="flex flex-wrap justify-center space-x-6 text-sm">
-            <a href="#quienes-somos" class="hover:underline">¿Quiénes somos?</a>
-            <a href="#servicios" class="hover:underline">Servicios</a>
-            <a href="#socios" class="hover:underline">Socios</a>
-            <a href="#blog" class="hover:underline">Blog</a>
-            <a href="#contacto" class="hover:underline">Contacto</a>
-        </nav>
-
-        <div class="flex space-x-4 text-blue-200 text-xl">
-            <a href="mailto:contacto@bybpro.com" target="_blank" title="Correo"><i class="fas fa-envelope"></i></a>
-            <a href="https://wa.me/573001112233" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/hbconsultor?igsh=YWVwazlrZHVxNXhn" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-        </div>
-
+        <!-- Copyright -->
         <div class="mt-6 text-center text-xs text-blue-300">
-        © 2025 B&B Profesional. Todos los derechos reservados.
+            © 2025 B&B Profesional. Todos los derechos reservados.
         </div>
     </footer>
+
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // duración en ms
+    once: true      // si la animación solo se ejecuta una vez
+  });
+</script>
+
+<script src="assets/public/scripts/script.js"></script>
 
 </body>
 </html>
