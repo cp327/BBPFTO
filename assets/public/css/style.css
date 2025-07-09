@@ -1,3 +1,16 @@
 html {
 scroll-behavior: smooth;
 }
+
+html {
+  scroll-padding-top: 6rem; /* o 96px según tu navbar */
+}
+
+
+
+@media (max-width: 639px) {
+.scroll-mt-mobile {
+    scroll-margin-top: 6rem; /* Equivalente a Tailwind scroll-mt-24 */
+}
+}
+

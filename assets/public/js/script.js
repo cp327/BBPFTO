@@ -32,3 +32,21 @@ backToTop.addEventListener("click", () => {
 });
 });
 
+
+function toggleAccordion(element) {
+const content = element.querySelector('.accordion-content');
+const isOpen = !content.classList.contains('hidden');
+
+document.querySelectorAll('.accordion-item').forEach(item => {
+    item.classList.remove('max-h-[1000px]');
+    item.querySelector('.accordion-content').classList.add('hidden');
+});
+
+if (!isOpen) {
+    content.classList.remove('hidden');
+    element.classList.add('max-h-[1000px]');
+}
+}
+
+
+
