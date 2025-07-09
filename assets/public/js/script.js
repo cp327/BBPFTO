@@ -17,6 +17,7 @@ menuLinks.forEach((link) => {
     });
 });
 
+
 // Back to Top
 const backToTop = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
@@ -35,18 +36,30 @@ backToTop.addEventListener("click", () => {
 
 function toggleAccordion(element) {
 const content = element.querySelector('.accordion-content');
+const icon = element.querySelector('.accordion-icon');
 const isOpen = !content.classList.contains('hidden');
 
 document.querySelectorAll('.accordion-item').forEach(item => {
-    item.classList.remove('max-h-[1000px]');
-    item.querySelector('.accordion-content').classList.add('hidden');
+    const otherContent = item.querySelector('.accordion-content');
+    const otherIcon = item.querySelector('.accordion-icon');
+    if (otherContent && !otherContent.classList.contains('hidden')) {
+    otherContent.classList.add('hidden');
+    otherIcon.textContent = '▼';
+    otherIcon.classList.remove('rotate-180');
+    }
 });
 
 if (!isOpen) {
     content.classList.remove('hidden');
-    element.classList.add('max-h-[1000px]');
+    icon.textContent = '▼';
+    icon.classList.add('rotate-180');
+} else {
+    content.classList.add('hidden');
+    icon.textContent = '▼';
+    icon.classList.remove('rotate-180');
 }
 }
+
 
 
 
